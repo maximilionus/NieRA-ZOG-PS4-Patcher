@@ -7,6 +7,7 @@
 # Основная информация
 - Данный мод меняет полностью все иконки кнопок в **NieR: Automata** c Xbox стиля на PS4 *(Dualshock 4)*
 - Разработчики поленились добавить поддержку разных геймпадов, а [DualShock 4 Button Prompts](https://community.pcgamingwiki.com/files/file/870-nier-automata-dualshock-4-button-prompts/) за авторством Erewego совсем не дружит с [локализацией от ZOG](https://forum.zoneofgames.ru/topic/42805-nier-automata/). Вот и пришлось допиливать все своими ручками.
+- Мод был проверен на лицензионной Steam версии, так что если вы ~~пират~~ не имеете лицензионной копии игры, то гарантировать стабильную работу мода я вам не могу.
 
 # Установка
 1. [Скачать архив с модом](https://github.com/maximilionus/NA_ZOG_PS4Prompts/releases/latest/download/NA_ZOG_PS4Prompts.zip) *(Самая актуальная версия)*
