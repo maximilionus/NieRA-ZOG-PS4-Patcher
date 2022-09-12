@@ -4,3 +4,8 @@ ui_us*.dtt
 
 # Ignore temp dir
 .temp/
+
+# Ignore pyinstaller artifacts
+*.spec
+src/build
+src/dist
