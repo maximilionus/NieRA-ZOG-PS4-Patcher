@@ -1,6 +1,6 @@
 import PyInstaller.__main__
 
-app_name = 'PS4 Prompts ZOG Patcher'
+app_name = 'NieRA ZOG PS4 Prompts Patcher'
 app_icon_win = './img/icon.ico'
 
 PyInstaller.__main__.run([
