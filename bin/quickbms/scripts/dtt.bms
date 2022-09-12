@@ -1,0 +1,15 @@
+idstring "DAT\0"
+for OFFSET = 0 < EOF
+    findloc OFFSET string "DDS "
+    goto OFFSET
+    get ddsMagic long
+    findloc SIZE string "DDS " 0 ""
+    if SIZE == ""
+    get SIZE asize
+    endif
+    goto SIZE
+    math SIZE -= OFFSET    
+    get NAME basename
+    string NAME p= "%s_%08x.dds" NAME OFFSET
+    log NAME OFFSET SIZE
+next

@@ -1,0 +1,6 @@
+# Ignore produced dtt textures
+ui_*_us/
+ui_us*.dtt
+
+# Ignore temp dir
+.temp/
