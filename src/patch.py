@@ -2,10 +2,10 @@ import sys
 from pathlib import Path
 from getpass import getpass
 from subprocess import call, DEVNULL
-from shutil import copy, rmtree
+from shutil import copy, rmtree, get_terminal_size
 
 
-__version__ = '2.0 Beta 1'
+__version__ = '2.0 Beta 2'
 
 
 def get_internal_dir() -> Path:
@@ -53,9 +53,13 @@ def main():
     notice_me('Проверяю, что все нужное на месте')
     missing = [file for file in DTT_FILES if not file.exists()]
     if len(missing) > 0:
-        print("Данные файлы не найдены в текущей дериктории:")
+        notice_me("Ошибка. Не найдены необходимые файлы:", '!')
         for missing_file in missing:
-            print('  ', missing_file.name)
+            print('   - ', missing_file.name)
+        print(
+            'Убедитесь, что у вас установлена последняя версия руссификатора от ZOG.'
+            ' Патчер расчитан на работу только с ZOG руссификатором.'
+        )
         return 0
 
     # Extract .dtt
@@ -77,18 +81,52 @@ def main():
 
 
 def show_intro():
-    print('NieR: Automata - RUS ZOG')
-    print('PS4 Prompts Patcher')
-    print(f'\nversion: {__version__}')
-    print('by @maximilionus <maximilionuss@gmail.com>')
+    centered_lines = (
+        'NieR: Automata - RUS ZOG',
+        'PS4 Prompts Patcher',
+        f'version: {__version__}\n',
+        'by @maximilionus <maximilionuss@gmail.com>',
+        'Полностью совместимая версия локализатора: "Версия 1.31 от 16.07.21"'
+    )
+    for line in centered_lines:
+        print(
+            center_string_terminal(line)
+        )
+
+    print(
+        '\nЭтот патч внесет изменения в некоторые игровые архивы руссификатора ZOG. '
+        'Что бы вернуть все в оригинальное состояние просто переустановите '
+        'руссификатор или же удалите его полностью.'
+    )
     print('\nДля правильной работы должен находиться в корневой папке игры или же в папке "<NIER>\\data\\ui"\n')
 
 
-def notice_me(text: str):
+def request_user_confirmation() -> bool:
+    result = False
+    while True:
+        user_input = input('? Продолжаем? [(y)es / (n)o)]: ')
+        if len(user_input) > 0: break
+
+    if user_input[0].lower() == 'y':
+        result = True
+
+    return result
+
+
+def notice_me(text: str, notice_symbol='>'):
     """
     Make the print noticeable
     """
-    print('👉 ', text)
+    print(notice_symbol, text)
+
+
+def center_string_terminal(string: str) -> str:
+    """
+    Center the string to the terminal window size
+    """
+    return string.center(
+        get_terminal_size()[0]
+    )
 
 
 def call_command(args=[], output=DEVNULL):
@@ -102,5 +140,8 @@ def pause():
 
 if __name__ == '__main__':
     show_intro()
-    main()
-    pause()
+    if request_user_confirmation():
+        main()
+        pause()
+    else:
+        notice_me('Подтверждение не получено, выход', '!')
