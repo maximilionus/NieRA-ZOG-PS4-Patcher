@@ -14,7 +14,7 @@
 - Оригинальный автор текстур PS4 Dualshock - [Spodi](https://www.nexusmods.com/nierautomata/mods/174)
 
 # Установка
-1. [Скачать архив с патчером](https://github.com/maximilionus/NierA-ZOG-PS4-Prompts/releases/latest/download/CHANGEME.zip) *(Самая актуальная версия)*
+1. [Скачать архив с патчером](https://github.com/maximilionus/NieRA-ZOG-PS4-Patcher/releases/latest)
 2. Распаковать файл `NieRA ZOG PS4 Prompts Patcher.exe` в корневую папку игры *(или же `<Директория_NieRAutomata>\data\ui`)*
 3. Запустить `NieRA ZOG PS4 Prompts Patcher.exe` и дождаться завершения работы
 4. Все готово, можно играть
