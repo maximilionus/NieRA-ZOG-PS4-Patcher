@@ -18,7 +18,7 @@
 # Установка
 1. [Скачать архив с патчером](https://github.com/maximilionus/NieRA-ZOG-PS4-Patcher/releases/latest)
 2. Распаковать файл `NieRA ZOG PS4 Prompts Patcher.exe` в корневую папку игры *(или же `<Директория_NieRAutomata>\data\ui`)*
-3. Запустить `NieRA ZOG PS4 Prompts Patcher.exe` и дождаться завершения работы
+3. Запустить `NieRA ZOG PS4 Prompts Patcher.exe`, подтвердить запуск и дождаться завершения работы
 4. Все готово, можно играть
 
 

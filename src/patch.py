@@ -5,7 +5,7 @@ from subprocess import call, DEVNULL
 from shutil import copy, rmtree, get_terminal_size
 
 
-__version__ = '2.0 Beta 2'
+__version__ = '2.0'
 
 
 def get_internal_dir() -> Path:
