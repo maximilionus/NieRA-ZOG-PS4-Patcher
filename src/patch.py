@@ -142,6 +142,6 @@ if __name__ == '__main__':
     show_intro()
     if request_user_confirmation():
         main()
-        pause()
     else:
         notice_me('Подтверждение не получено, выход', '!')
+    pause()
