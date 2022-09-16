@@ -30,7 +30,7 @@ SOFTWARE.
 Название: QuickBMS
 Автор: Luigi Auriemma
 Веб сайт: http://aluigi.altervista.org/quickbms.htm
-=====================
+===================================================
 
                     GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
